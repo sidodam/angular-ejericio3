@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'colors';
+
+  text = ""
+  constructor(private el : ElementRef){
+
+    
+  }
+
+
+  @HostListener('click' , ['$event']) manjear(){
+
+    alert(this.el.nativeElement.innerText)
+  }
+
+  clickEvent(){
+
+    return this.text = "Has pulsado el botón"
+       
+  }
+  
+
+
 }
+
+

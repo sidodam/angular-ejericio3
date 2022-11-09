@@ -6,9 +6,11 @@
 <div ngClass="flex justify-evenly">
   
   
-<button (click)="clickEvent()" ngClass="text-green-600 bg-slate-300 rounded-sm p-3">UNO</button>
-<button    ngClass="text-red-600 bg-slate-300 rounded-sm p-3">DOS</button>
-<button ngClass="text-blue-700 bg-slate-300 rounded-sm p-3">TRES</button>
 
-<app-hijo [showText]="text"></app-hijo>
+
+<button   (click)="clickEvent($event.target)" ngClass="text-green-600 bg-slate-300 rounded-sm p-3">verde</button>
+<button (click)="clickEvent($event.target)"      ngClass="text-red-600 bg-slate-300 rounded-sm p-3">rojo</button>
+<button (click)="clickEvent($event.target)"  ngClass="text-blue-700 bg-slate-300 rounded-sm p-3">azul</button>
+
+<app-hijo [showText]="btnName"></app-hijo>
 </div>
